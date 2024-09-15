@@ -10,59 +10,10 @@
     <link rel="stylesheet" href="main.css">
     <!-- This is an A11y Change -->
     <style>
-       /*-- This is an A11y Change */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li {
-            margin: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            display: block;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-        }
-
-        /* This is an A11y Change */
-        .page-area {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .page-area article {
-            width: 45%;
-            margin-bottom: 20px;
-        }
-
-        .page-area h1 {
-            color: #333;
-        }
-
-        .page-area p {
-            color: #666;
-        }
-
-        /* This is an A11y Change */
-        .bottom {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        body {
+            font-family: "Calibri, sans-serif;";
+            position: relative;
+            color: rgb(33, 30, 30);
         }
         svg {
             width: 100%;
@@ -79,19 +30,24 @@
             stroke-width: 2px;
             fill: none;
         }
-    </style>
+        </style>
 </head>
 <body>
-
-<a href="#main" class="skip">Skip to content</a>
+    <!-- This is an A11y Change -->
+    <a href="#main" class="skip">Skip to content</a>
 
     <nav>
         <ul>
-            <!-- This is a Semantic HTML Change --> 
-            <li><a href="/">HomePage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+            <!-- This is a Semantic HTML Change -->
+            <li><a href="/">Homepage</a></li>
+            <!-- This is an A11y Change -->
+            <li aria-haspopup="true"></li>
+            <!-- This is an A11y Change -->
+            <li role="menuitem"><a href="/about.html">About</a></li>
+            <!-- This is an A11y Change -->
+            <li role="menuitem"><a href="/login.html">Login</a></li>
+            <!-- This is an A11y Change -->
+            <li role="menuitem"><a href="https://google.com">Google</a></li>
         </ul>
     </nav>
 
@@ -106,35 +62,42 @@
 
             <article>
                 <h1>Stay on track</h1>
-                 <!-- This is an SEO Change -->
-                 <meta name="description" content="Recommendation for staying on track">
-                <!-- This is a Semantic HTML Change --> 
-                <i>
-                    Do you know where you are spending your money? If you really stop to track it down,
-                    you would get surprised! Proper budget management depends on real data... and this
-                    app will help you with that!
-                </i>
+                <p>
+                    <!-- This is an SEO Change -->
+                    <meta name="description" content="Tips for staying on track">
+                    <!-- This is a Semantic HTML Change -->
+                    <h3>
+                        Do you know where you are spending your money? If you really stop to track it down,
+                        you would get surprised! Proper budget management depends on real data... and this
+                        app will help you with that!
+                    </h3>
+                </p>
             </article>
     
             <article>
                 <h1>Alerts</h1>
                 <p>
-                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                   <!-- This is a Semantic HTML Change --> 
+                    <span>
+                        What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                    </span>
                 </p>
             </article>
     
             <article>
                 <h1>Results</h1>
-                <!-- This is a Semantic HTML Change --> 
-                <h4>
+                <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!
                     Also, they to live happier lives... since they expend without guilt or fear... 
                     because they know it is all good and accounted for.
-                </h4>
+                </p>
             </article>
     
             <article>
-                <h1>Free</h1>
+                <!-- This is an SEO Change -->
+                <header>
+                    <h1> Free </h1>
+                </header>
                 <p>
                     This app is free!!! And you are the only one holding your data!
                 </p>
@@ -142,19 +105,24 @@
     
             <article>
                 <!-- This is an SEO Change -->
-                <u><h1>Stay on track</h1></u>
-                <p>
+                <header>
+                    <h2> Stay on track </h2>
+                </header>
+                <!-- This is a Semantic HTML Change -->
+                <h3>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
                     app will help you with that!
-                </p>
+                </h3>
             </article>
     
             <article>
-                <!-- This is an SEO Change -->
-                <header><u><h3>Alerts</h3></u></header>
+                <h1>Alerts</h1>
                 <p>
-                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                    <!-- This is a Semantic HTML Change --> 
+                    <i>
+                        What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                    </i>
                 </p>
             </article>
     
@@ -168,15 +136,14 @@
             </article>
     
             <article>
-                <h1>Chart.js Pie Chart</h1>
+                <h1>Chart</h1>
                 <p>
                     <canvas id="myChart" width="400" height="400"></canvas>
                 </p>
             </article>
-
-            <!-- D3 Pie Chart container -->
+            
             <div>
-                <h1>D3.js Chart</h1>
+                <h1>D3.js</h1>
                 <svg width="960px", height="650px" style="margin: 5px;"></svg>
             </div>
 
@@ -189,7 +156,6 @@
             All rights reserved &copy; Fabio Nolasco
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 
